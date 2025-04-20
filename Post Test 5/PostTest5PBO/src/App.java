@@ -16,7 +16,7 @@ public class App {
         Scanner inputMenu = new Scanner(System.in);
         do {
             System.out.println("");
-            System.out.println("Selamat datang di aplikasi peminjaman! " + username);
+            System.out.println("Selamat datang di aplikasi peminjaman! ");
             System.out.println("Pilih :");
             System.out.println("1. Peminjam");
             System.out.println("2. Admin");

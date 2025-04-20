@@ -24,6 +24,7 @@ class Pinjam extends User {
     // Peminjam peminjam = new Peminjam(username);
     String menu = null;
     Scanner inputMenu = new Scanner(System.in);
+    peminjam.setNama(username);
 
     do {
       System.out.println("");
