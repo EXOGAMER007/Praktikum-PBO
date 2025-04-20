@@ -25,6 +25,10 @@ public final class Pinjaman {
     pinjaman.set(index, jumlahPinjaman);
   }
 
+  void SetujuiPinjaman(int index) {
+    pengajuan.set(index, "Disetujui");
+  }
+
   void lihatPinjaman() {
     System.out.println("");
     System.out.println("Daftar pengajuan Peminjaman ");

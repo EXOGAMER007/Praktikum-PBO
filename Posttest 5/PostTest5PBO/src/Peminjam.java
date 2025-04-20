@@ -19,6 +19,12 @@ public final class Peminjam {
     pinjaman.lihatPinjaman();
   }
 
+  void Peminjaman(int pilihan, String Jenis) {
+    if (Jenis.equals("Setujui")) {
+      pinjaman.SetujuiPinjaman(pilihan);
+    }
+  }
+
   void Peminjaman(int pilihan) {
     System.out.println("");
     int menu;
@@ -29,7 +35,7 @@ public final class Peminjam {
         System.out.println("Atas nama siapa?");
         namaSementara = input.nextLine();
         System.out.print("Masukkan jumlah pinjaman: ");
-        jumlahPinjaman = input.nextFloat();
+        jumlahPinjaman = Float.parseFloat(input.nextLine());
         pinjaman.tambahPinjaman(jumlahPinjaman, namaSementara);
         break;
       case 2:

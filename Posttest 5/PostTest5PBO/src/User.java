@@ -3,6 +3,7 @@ import java.util.Scanner;
 abstract class User {
   static String username;
   public static Peminjam peminjam = new Peminjam();
+  final String password = "123456";
 
   public User(String username) {
     User.username = username;
@@ -71,17 +72,31 @@ class Admin extends User {
   public void menu() {
     String menu = null;
     Scanner inputMenu = new Scanner(System.in);
+    System.out.print("Masukkan password: ");
+    String pass = inputMenu.nextLine();
+    if (!pass.equals(password)) {
+      System.out.println("Password salah!");
+      return;
+    }
     do {
 
       System.out.println("");
       System.out.println("Selamat datang admin!");
       System.out.println("1. Lihat Peminjam");
+      System.out.println("2. Setujui Peminjaman");
       System.out.println("0. keluar");
       System.out.print("Pilih menu: ");
       menu = inputMenu.nextLine();
       switch (menu) {
         case "1":
           peminjam.Peminjaman();
+          break;
+        case "2":
+          peminjam.Peminjaman();
+          System.out.print("Pilih pinjaman yang akan disetujui: ");
+          int pilih = Integer.parseInt(inputMenu.nextLine());
+          String Jenis = "Setujui";
+          peminjam.Peminjaman(pilih - 1, Jenis);
           break;
         case "0":
           menu = "0";
@@ -90,6 +105,6 @@ class Admin extends User {
           System.out.println("Menu tidak valid");
           break;
       }
-    } while (!menu.equals("2"));
+    } while (!menu.equals("0"));
   }
 }

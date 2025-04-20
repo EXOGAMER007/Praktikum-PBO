@@ -8,9 +8,6 @@ public class App {
         System.out.print("Masukan Username :");
         username = input.nextLine();
 
-        // User user = new User(username);
-        // user.menu();
-        // input.close();
         boolean status = true;
         String menu = null;
         Scanner inputMenu = new Scanner(System.in);
